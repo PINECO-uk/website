@@ -50,7 +50,6 @@ export default {
           DEFAULT: "hsl(var(--pine-brown))",
           light: "hsl(var(--pine-brown-light))",
         },
-        },
         popover: {
           DEFAULT: "hsl(var(--popover))",
           foreground: "hsl(var(--popover-foreground))",
