@@ -46,6 +46,11 @@ export default {
           foreground: "hsl(var(--accent-foreground))",
           success: "hsl(var(--accent-success))",
         },
+        pine: {
+          DEFAULT: "hsl(var(--pine-brown))",
+          light: "hsl(var(--pine-brown-light))",
+        },
+        },
         popover: {
           DEFAULT: "hsl(var(--popover))",
           foreground: "hsl(var(--popover-foreground))",
