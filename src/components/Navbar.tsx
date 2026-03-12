@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { Menu, X, Phone, TreePine } from "lucide-react";
+import { Menu, X, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import pinecoLogo from "@/assets/pineco-logo.jpg";
 
 const navLinks = [
   { label: "Home", href: "/" },
@@ -21,7 +22,7 @@ const Navbar = () => {
       <div className="container mx-auto px-4 lg:px-8">
         <div className="flex items-center justify-between h-20">
           <Link to="/" className="flex items-center gap-2">
-            <TreePine className="h-8 w-8 text-accent" />
+            <img src={pinecoLogo} alt="PINECO logo" className="h-12 w-12 rounded-full object-cover" />
             <span className="font-heading text-2xl font-bold text-foreground tracking-tight">
               PINECO
             </span>

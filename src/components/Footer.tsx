@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
-import { TreePine, MapPin, Phone, Mail, Clock } from "lucide-react";
+import { MapPin, Phone, Mail, Clock } from "lucide-react";
+import pinecoLogo from "@/assets/pineco-logo.jpg";
 
 const Footer = () => {
   return (
@@ -8,7 +9,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           <div>
             <Link to="/" className="flex items-center gap-2 mb-4">
-              <TreePine className="h-7 w-7 text-accent" />
+              <img src={pinecoLogo} alt="PINECO logo" className="h-10 w-10 rounded-full object-cover" />
               <span className="font-heading text-xl font-bold text-primary-foreground">
                 PINECO
               </span>
