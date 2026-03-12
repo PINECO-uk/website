@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Star } from "lucide-react";
 import heroImage from "@/assets/hero-consultancy.jpg";
+import pinecoLogo from "@/assets/pineco-logo.jpg";
 
 const HeroSection = () => {
   const navigate = useNavigate();
@@ -23,14 +24,9 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="flex items-center gap-2 mb-6"
+            className="mb-8"
           >
-            <div className="flex gap-0.5">
-              {[...Array(5)].map((_, i) => (
-                <Star key={i} className="h-4 w-4 fill-accent text-accent" />
-              ))}
-            </div>
-            <span className="text-sm font-medium text-accent">Trusted by 200+ organisations</span>
+            <img src={pinecoLogo} alt="PINECO logo" className="h-28 w-28 md:h-36 md:w-36 rounded-2xl object-cover shadow-lg" />
           </motion.div>
 
           <motion.h1
@@ -39,8 +35,8 @@ const HeroSection = () => {
             transition={{ duration: 0.7, delay: 0.1 }}
             className="text-5xl md:text-6xl lg:text-7xl font-heading font-bold text-primary-foreground leading-tight mb-6"
           >
-            Consultancy, Training &{" "}
-            <span className="text-accent">Project Coordination</span>
+            Small Seeds,{" "}
+            <span className="text-accent">Lasting Impact</span>
           </motion.h1>
 
           <motion.p
@@ -49,7 +45,7 @@ const HeroSection = () => {
             transition={{ duration: 0.7, delay: 0.2 }}
             className="text-lg md:text-xl text-primary-foreground/80 mb-10 leading-relaxed max-w-lg"
           >
-            Empowering businesses with strategic insights, professional development, and seamless project delivery.
+            Consultancy, training and project coordination — empowering organisations to grow sustainably.
           </motion.p>
 
           <motion.div

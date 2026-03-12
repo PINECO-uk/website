@@ -14,7 +14,7 @@ const Index = () => {
       <HeroSection />
       <TrustBadges />
       <ServiceCards />
-      <SuitePreview />
+      
       <Testimonials />
       <CTASection />
       <Footer />
