@@ -96,8 +96,8 @@ const About = () => (
           <div className="absolute left-1/2 -translate-x-1/2 top-0 bottom-0 w-1 bg-gradient-to-b from-[hsl(var(--pine-brown))] via-primary to-accent rounded-full hidden md:block" />
 
           {/* Pine icon at top of trunk */}
-          <div className="hidden md:flex absolute left-1/2 -translate-x-1/2 -top-6 w-12 h-12 rounded-full bg-[hsl(var(--pine-brown))] items-center justify-center z-10 shadow-md">
-            <TreePine className="h-6 w-6 text-primary-foreground" />
+          <div className="hidden md:flex absolute left-1/2 -translate-x-1/2 -top-12 w-24 h-24 rounded-2xl overflow-hidden z-10 shadow-lg border-4 border-background">
+            <img src={pinecoLogo} alt="PINECO" className="w-full h-full object-cover" />
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-0">
