@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Star } from "lucide-react";
-import heroImage from "@/assets/hero-consultancy.jpg";
+import heroImage from "@/assets/project-coordination.jpg";
 import pinecoLogo from "@/assets/pineco-logo.jpg";
 
 const HeroSection = () => {
