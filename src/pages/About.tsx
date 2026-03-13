@@ -89,7 +89,7 @@ const About = () => (
           My Journey
         </motion.h2>
         <p className="text-center text-muted-foreground mb-16 max-w-xl mx-auto">
-          Growing expertise, branching out — like a pine tree, rooted in experience and reaching for impact.
+          Growing expertise, branching out — like a pinecone, rooted in experience and reaching for impact.
         </p>
 
         <div className="relative">
