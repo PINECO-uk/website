@@ -36,7 +36,7 @@ const About = () => (
           className="flex justify-center"
         >
           <div className="relative">
-            <div className="w-72 h-72 md:w-80 md:h-80 rounded-full bg-[hsl(var(--pine-brown-light))] border-4 border-[hsl(var(--pine-brown)/0.3)] flex items-center justify-center overflow-hidden shadow-lg">
+            <div className="w-72 h-72 md:w-80 md:h-80 rounded-full bg-[hsl(var(--pine-brown-light))] border-4 border-[hsl(var(--pine-brown)/0.3)] flex items-center justify-center overflow-hidden shadow-xl ring-4 ring-primary/20">
               {/* Replace with actual photo */}
               <div className="text-center p-6">
                 <Users className="h-16 w-16 text-[hsl(var(--pine-brown))] mx-auto mb-3" />
