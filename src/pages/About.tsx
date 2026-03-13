@@ -1,8 +1,9 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { motion } from "framer-motion";
-import { Briefcase, GraduationCap, Award, MapPin, Calendar, TreePine, Users, Target } from "lucide-react";
+import { Briefcase, GraduationCap, Award, MapPin, Calendar, Users, Target } from "lucide-react";
 import pinecoLogo from "@/assets/pineco-logo.jpg";
+import pineconeIcon from "@/assets/pinecone-icon.png";
 
 const workExperience = [
   { year: "2023–Present", role: "Founder & Lead Consultant", org: "PINECO", desc: "Consultancy, training & project coordination for NGOs and small businesses across Europe." },
