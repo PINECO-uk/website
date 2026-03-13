@@ -1,24 +1,28 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { motion } from "framer-motion";
-import { Briefcase, GraduationCap, Award, MapPin, Calendar, Users, Target } from "lucide-react";
+import { Briefcase, GraduationCap, Award, MapPin, Calendar, Users, Target, Globe } from "lucide-react";
 import pinecoLogo from "@/assets/pineco-logo.jpg";
 import pineconeIcon from "@/assets/pinecone-icon.png";
 
 const workExperience = [
-  { year: "2023–Present", role: "Founder & Lead Consultant", org: "PINECO", desc: "Consultancy, training & project coordination for NGOs and small businesses across Europe." },
-  { year: "2021–2023", role: "Project Coordinator", org: "International NGO Sector", desc: "Led social and strategic projects using Agile methodology, from planning to evaluation." },
-  { year: "2019–2021", role: "Volunteer Coordinator", org: "Non-Profit Organisations", desc: "Designed and implemented volunteering strategies, onboarding frameworks and team development." },
-  { year: "2017–2019", role: "Programme Manager", org: "Community Sector", desc: "Managed Erasmus+ programmes and cross-border collaboration initiatives." },
+  { year: "2025–Present", role: "Founder & Lead Consultant", org: "PINECO, Cambridge, UK", desc: "Designing and delivering training programmes, managing social and strategic projects, and providing consultancy on organisational management, volunteer coordination, and digital transformation." },
+  { year: "2023–2024", role: "Project Manager", org: "Association Level Up, Poland (Hybrid)", desc: "Managed 7+ international and local projects (Erasmus+, European Solidarity Corps). Secured €150,000+ in grant funding. Coordinated cross-functional teams and events for 50+ participants." },
+  { year: "2020–2023", role: "Junior Follow-Up Coordinator → Coordinator", org: "DKMS Poland Foundation, Warsaw", desc: "Coordinated post-donation care for stem cell donors. Conducted training sessions for new employees and developed onboarding programmes." },
+  { year: "2019–Present", role: "Volunteer Coordinator & Co-Founder", org: "Association Level Up, Poland (Online)", desc: "Co-founded the association. Managing e-volunteering with 550+ volunteers and 150 interns. Leading an international team of 12 members." },
 ];
 
 const training = [
-  { year: "2023", title: "Agile Project Management", provider: "Certified Training" },
-  { year: "2022", title: "AI for Organisations", provider: "Digital Skills Programme" },
-  { year: "2021", title: "Volunteer Management Certification", provider: "European Training" },
-  { year: "2020", title: "Erasmus+ Programme Design", provider: "EU Accredited" },
-  { year: "2019", title: "Leadership & Strategy", provider: "Professional Development" },
-  { year: "2018", title: "Child Protection & Safeguarding", provider: "Certified Course" },
+  { year: "2025", title: "AIDEAS — Building AI Agents & Business Solutions" },
+  { year: "2025", title: "AI in the Third Sector — Laws & Good Practices" },
+  { year: "2024", title: "Child Protection Policies for NGOs" },
+  { year: "2024", title: "Facilitator — Become Young Entrepreneur (Youth Exchange)" },
+  { year: "2023", title: "Facilitator — Closer to Nature (Youth Exchange)" },
+  { year: "2023", title: "Legal & Formal Aspects of Volunteering" },
+  { year: "2022", title: "International Digital Skills Training (WIDE)" },
+  { year: "2021", title: "Agile PM Foundation Certificate" },
+  { year: "2021", title: "Google for Managers" },
+  { year: "2019", title: "Master's Degree — Laboratory Medicine, Medical University of Łódź" },
 ];
 
 const About = () => (
@@ -57,27 +61,33 @@ const About = () => (
           transition={{ duration: 0.6, delay: 0.15 }}
         >
           <h1 className="font-heading text-4xl md:text-5xl font-bold text-foreground mb-2">
-            About <span className="text-gradient-primary">PINECO</span>
+            Hi, I'm <span className="text-gradient-primary">Anna</span>
           </h1>
           <p className="text-lg text-[hsl(var(--pine-brown))] font-heading font-semibold mb-4">
-            Small Seeds, Lasting Impact
+            Project Manager · Volunteer Coordinator · Trainer
           </p>
           <p className="text-muted-foreground leading-relaxed mb-4">
-            Cambridge-based, collaborating remotely across Europe. I help non-profit organisations, small businesses, community groups and social enterprises unlock their full potential through expert consultancy, impactful training, and hands-on project coordination.
+            I'm an experienced project coordinator with a background in healthcare and volunteer management. Through <strong className="text-foreground">PINECO</strong>, I help non-profit organisations, community groups and social enterprises grow through expert consultancy, impactful training, and hands-on project coordination.
+          </p>
+          <p className="text-muted-foreground leading-relaxed mb-4">
+            I'm also the co-founder of <strong className="text-foreground">Association Level Up</strong> — a Polish non-profit founded in 2019, dedicated to improving quality of life through social projects, informal education, and international volunteering (Erasmus+ & ESC accredited).
           </p>
           <div className="flex flex-wrap gap-3">
             <span className="inline-flex items-center gap-1.5 text-sm bg-primary/10 text-primary px-3 py-1.5 rounded-full font-medium">
               <MapPin className="h-3.5 w-3.5" /> Cambridge, UK
             </span>
             <span className="inline-flex items-center gap-1.5 text-sm bg-accent/10 text-accent px-3 py-1.5 rounded-full font-medium">
-              <Target className="h-3.5 w-3.5" /> Remote across Europe
+              <Globe className="h-3.5 w-3.5" /> Remote across Europe
+            </span>
+            <span className="inline-flex items-center gap-1.5 text-sm bg-[hsl(var(--pine-brown-light))] text-[hsl(var(--pine-brown))] px-3 py-1.5 rounded-full font-medium">
+              <GraduationCap className="h-3.5 w-3.5" /> MSc Laboratory Medicine
             </span>
           </div>
         </motion.div>
       </div>
     </section>
 
-    {/* Pine Tree Timeline */}
+    {/* Timeline */}
     <section className="py-20 bg-section-alt">
       <div className="container mx-auto px-4 lg:px-8 max-w-6xl">
         <motion.h2
@@ -89,13 +99,12 @@ const About = () => (
           My Journey
         </motion.h2>
         <p className="text-center text-muted-foreground mb-16 max-w-xl mx-auto">
-          Growing expertise, branching out — like a pinecone, rooted in experience and reaching for impact.
+          From laboratory medicine to leading international projects — a path driven by curiosity and impact.
         </p>
 
         <div className="relative">
           {/* Central trunk line */}
           <div className="absolute left-1/2 -translate-x-1/2 top-0 bottom-0 w-1 bg-gradient-to-b from-[hsl(var(--pine-brown))] via-primary to-accent rounded-full hidden md:block" />
-
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-0">
             {/* Left side: Work Experience */}
@@ -135,7 +144,7 @@ const About = () => (
               ))}
             </div>
 
-            {/* Right side: Training */}
+            {/* Right side: Training & Certifications */}
             <div className="md:pl-12 space-y-8">
               <motion.div
                 initial={{ opacity: 0 }}
@@ -165,7 +174,6 @@ const About = () => (
                       <Award className="h-3 w-3" /> {item.year}
                     </span>
                     <h4 className="font-heading text-base font-bold text-card-foreground">{item.title}</h4>
-                    <p className="text-sm text-muted-foreground">{item.provider}</p>
                   </div>
                 </motion.div>
               ))}
@@ -185,17 +193,38 @@ const About = () => (
       </div>
     </section>
 
-    {/* Values */}
+    {/* Skills & Tools */}
     <section className="py-20 bg-background">
+      <div className="container mx-auto px-4 lg:px-8 max-w-4xl">
+        <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
+          <h2 className="font-heading text-3xl font-bold text-foreground mb-8 text-center">Skills & Tools</h2>
+          <div className="flex flex-wrap justify-center gap-3">
+            {[
+              "Agile Project Management", "Grant Writing", "Erasmus+", "European Solidarity Corps",
+              "Volunteer Coordination", "Team Leadership", "Trello", "Jira", "Confluence",
+              "Google Workspace", "MS Office", "Canva", "AI Tools", "Zoom", "MS Teams",
+              "Polish (Native)", "English (B2/C1)",
+            ].map((skill) => (
+              <span key={skill} className="text-sm bg-card px-4 py-2 rounded-full card-elevated text-foreground font-medium">
+                {skill}
+              </span>
+            ))}
+          </div>
+        </motion.div>
+      </div>
+    </section>
+
+    {/* Values */}
+    <section className="py-20 bg-section-alt">
       <div className="container mx-auto px-4 lg:px-8 max-w-4xl">
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
           <h2 className="font-heading text-3xl font-bold text-foreground mb-8 text-center">My Values</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {[
-              { title: "Integrity", desc: "Transparency and honesty in every engagement." },
-              { title: "Excellence", desc: "Delivering the highest quality of work, every time." },
-              { title: "Collaboration", desc: "True partnership — I succeed when you succeed." },
-              { title: "Innovation", desc: "Fresh perspectives and creative solutions for your challenges." },
+              { title: "Impact-Driven", desc: "Every project starts with a clear social purpose — improving lives and building stronger communities." },
+              { title: "Collaboration", desc: "True partnership — working with international teams, volunteers, and organisations to achieve shared goals." },
+              { title: "Growth Mindset", desc: "Constantly learning — from laboratory medicine to AI tools, always adapting to serve better." },
+              { title: "Empowerment", desc: "Equipping organisations and individuals with skills and strategies to thrive independently." },
             ].map((value) => (
               <div key={value.title} className="bg-card rounded-xl p-6 card-elevated border-l-4 border-accent/50">
                 <h3 className="font-heading text-lg font-semibold text-card-foreground mb-2">{value.title}</h3>
