@@ -96,9 +96,9 @@ const About = () => (
           {/* Central trunk line */}
           <div className="absolute left-1/2 -translate-x-1/2 top-0 bottom-0 w-1 bg-gradient-to-b from-[hsl(var(--pine-brown))] via-primary to-accent rounded-full hidden md:block" />
 
-          {/* Pine icon at top of trunk */}
-          <div className="hidden md:flex absolute left-1/2 -translate-x-1/2 -top-12 w-24 h-24 rounded-2xl overflow-hidden z-10 shadow-lg border-4 border-background">
-            <img src={pinecoLogo} alt="PINECO" className="w-full h-full object-cover" />
+          {/* Pinecone at top of trunk */}
+          <div className="hidden md:flex absolute left-1/2 -translate-x-1/2 -top-8 w-16 h-16 rounded-full bg-primary/10 z-10 items-center justify-center border-4 border-background">
+            <img src={pineconeIcon} alt="Pinecone" className="h-8 w-8 object-contain" />
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-0">
