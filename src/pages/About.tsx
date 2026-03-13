@@ -1,8 +1,9 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { motion } from "framer-motion";
-import { Briefcase, GraduationCap, Award, MapPin, Calendar, TreePine, Users, Target } from "lucide-react";
+import { Briefcase, GraduationCap, Award, MapPin, Calendar, Users, Target } from "lucide-react";
 import pinecoLogo from "@/assets/pineco-logo.jpg";
+import pineconeIcon from "@/assets/pinecone-icon.png";
 
 const workExperience = [
   { year: "2023–Present", role: "Founder & Lead Consultant", org: "PINECO", desc: "Consultancy, training & project coordination for NGOs and small businesses across Europe." },
@@ -42,9 +43,9 @@ const About = () => (
                 <p className="text-sm text-muted-foreground font-medium">Your Photo Here</p>
               </div>
             </div>
-            {/* Decorative pine accent */}
+            {/* Decorative pinecone accent */}
             <div className="absolute -bottom-4 -right-4 w-20 h-20 rounded-full bg-primary/10 flex items-center justify-center">
-              <TreePine className="h-10 w-10 text-primary" />
+              <img src={pineconeIcon} alt="Pinecone" className="h-10 w-10 object-contain" />
             </div>
           </div>
         </motion.div>
@@ -88,7 +89,7 @@ const About = () => (
           My Journey
         </motion.h2>
         <p className="text-center text-muted-foreground mb-16 max-w-xl mx-auto">
-          Growing expertise, branching out — like a pine tree, rooted in experience and reaching for impact.
+          Growing expertise, branching out — like a pinecone, rooted in experience and reaching for impact.
         </p>
 
         <div className="relative">
