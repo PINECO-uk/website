@@ -19,7 +19,7 @@ const HeroSection = () => {
       <div className="relative container mx-auto px-4 lg:px-8 pt-20">
         <div className="max-w-2xl">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className="mb-8">
-            <img src={pinecoLogo} alt="PINECO logo" className="h-28 w-28 md:h-36 md:w-36 rounded-2xl object-cover shadow-lg" />
+            <img src={pinecoLogo} alt="PINECO logo" className="h-28 w-28 md:h-36 md:w-36 rounded-none object-cover shadow-lg" />
           </motion.div>
 
           <motion.h1 initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.1 }} className="text-5xl md:text-6xl lg:text-7xl font-heading font-bold text-primary-foreground leading-tight mb-6">

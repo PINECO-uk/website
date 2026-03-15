@@ -21,7 +21,7 @@ const CTASection = () => {
                 {t("cta.startConversation")}
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
-              <Button variant="outline" onClick={() => navigate("/projects")} className="border-2 border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 rounded-full px-8 py-6 text-lg font-semibold">
+              <Button variant="outline" onClick={() => navigate("/collaborations")} className="border-2 border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 rounded-full px-8 py-6 text-lg font-semibold">
                 <CalendarDays className="mr-2 h-5 w-5" />
                 {t("cta.viewProjects")}
               </Button>

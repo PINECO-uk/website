@@ -9,8 +9,7 @@ const Footer = () => {
   const quickLinks = [
     { key: "nav.about", href: "/about" },
     { key: "nav.services", href: "/services" },
-    { key: "nav.projects", href: "/projects" },
-    { key: "nav.recommendations", href: "/recommendations" },
+    { key: "nav.collaborations", href: "/collaborations" },
     { key: "nav.contact", href: "/contact" },
   ];
 
@@ -20,7 +19,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           <div>
             <Link to="/" className="flex items-center gap-2 mb-4">
-              <img src={pinecoLogo} alt="PINECO logo" className="h-10 w-10 rounded-full object-cover" />
+              <img src={pinecoLogo} alt="PINECO logo" className="h-10 w-10 rounded-none object-cover" />
               <span className="font-heading text-xl font-bold text-primary-foreground">PINECO</span>
             </Link>
             <p className="text-sm leading-relaxed mb-6">{t("footer.desc")}</p>

@@ -64,6 +64,8 @@ const About = () => {
             <p className="text-lg text-[hsl(var(--pine-brown))] font-heading font-semibold mb-4">{t("about.roles")}</p>
             <p className="text-muted-foreground leading-relaxed mb-4">{t("about.bio1")}</p>
             <p className="text-muted-foreground leading-relaxed mb-4">{t("about.bio2")}</p>
+            <p className="text-muted-foreground leading-relaxed mb-4">{t("about.bio3")}</p>
+            <p className="text-muted-foreground leading-relaxed mb-6 italic">{t("about.bio4")}</p>
             <div className="flex flex-wrap gap-3">
               <span className="inline-flex items-center gap-1.5 text-sm bg-primary/10 text-primary px-3 py-1.5 rounded-full font-medium">
                 <MapPin className="h-3.5 w-3.5" /> Cambridge, UK
@@ -135,7 +137,7 @@ const About = () => {
             </div>
 
             <motion.div initial={{ opacity: 0, scale: 0.8 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} className="flex justify-center mt-16">
-              <img src={pinecoLogo} alt="PINECO Logo" className="w-32 h-32 object-contain rounded-2xl shadow-md" />
+              <img src={pinecoLogo} alt="PINECO Logo" className="w-32 h-32 object-contain rounded-none shadow-md" />
             </motion.div>
           </div>
         </div>

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { Menu, X, Phone } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/contexts/LanguageContext";
 import pinecoLogo from "@/assets/pineco-logo.jpg";
@@ -9,8 +9,7 @@ const navLinks = [
   { key: "nav.home", href: "/" },
   { key: "nav.about", href: "/about" },
   { key: "nav.services", href: "/services" },
-  { key: "nav.projects", href: "/projects" },
-  { key: "nav.recommendations", href: "/recommendations" },
+  { key: "nav.collaborations", href: "/collaborations" },
   { key: "nav.contact", href: "/contact" },
 ];
 
@@ -24,7 +23,7 @@ const Navbar = () => {
       <div className="container mx-auto px-4 lg:px-8">
         <div className="flex items-center justify-between h-20">
           <Link to="/" className="flex items-center gap-2">
-            <img src={pinecoLogo} alt="PINECO logo" className="h-12 w-12 rounded-full object-cover" />
+            <img src={pinecoLogo} alt="PINECO logo" className="h-12 w-12 rounded-none object-cover" />
             <span className="font-heading text-2xl font-bold text-foreground tracking-tight">
               PINECO
             </span>

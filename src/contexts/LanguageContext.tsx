@@ -13,15 +13,14 @@ const translations: Record<string, Record<Language, string>> = {
   "nav.home": { en: "Home", pl: "Strona główna" },
   "nav.about": { en: "About", pl: "O mnie" },
   "nav.services": { en: "Services", pl: "Usługi" },
-  "nav.projects": { en: "Projects", pl: "Projekty" },
-  "nav.recommendations": { en: "Recommendations", pl: "Rekomendacje" },
+  "nav.collaborations": { en: "Past Collaborations", pl: "Dotychczasowe współprace" },
   "nav.contact": { en: "Contact", pl: "Kontakt" },
   "nav.getInTouch": { en: "Get in Touch", pl: "Napisz do mnie" },
 
   // Hero
   "hero.title1": { en: "Small Seeds,", pl: "Małe nasiona," },
-  "hero.title2": { en: "Lasting Impact", pl: "Trwały wpływ" },
-  "hero.subtitle": { en: "Consultancy, training and project coordination — empowering organisations to grow sustainably.", pl: "Doradztwo, szkolenia i koordynacja projektów — wspieramy organizacje w zrównoważonym rozwoju." },
+  "hero.title2": { en: "Lasting Impact.", pl: "Trwały wpływ." },
+  "hero.subtitle": { en: "Consultancy, training and project coordination for nonprofits, community groups and social enterprises across Europe.", pl: "Doradztwo, szkolenia i koordynacja projektów dla organizacji pozarządowych, grup społecznych i przedsiębiorstw społecznych w całej Europie." },
   "hero.services": { en: "Our Services", pl: "Nasze usługi" },
   "hero.consultation": { en: "Schedule a Consultation", pl: "Umów konsultację" },
 
@@ -69,6 +68,7 @@ const translations: Record<string, Record<Language, string>> = {
   "footer.email": { en: "Email", pl: "Email" },
   "footer.hours": { en: "Hours", pl: "Godziny" },
   "footer.rights": { en: "© 2024 PINECO. All rights reserved.", pl: "© 2024 PINECO. Wszelkie prawa zastrzeżone." },
+  "footer.collaborations": { en: "Past Collaborations", pl: "Dotychczasowe współprace" },
   "footer.projectCoordination": { en: "Project Coordination", pl: "Koordynacja projektów" },
   "footer.volunteeringManagement": { en: "Volunteering Management", pl: "Zarządzanie wolontariatem" },
   "footer.training": { en: "Training", pl: "Szkolenia" },
@@ -76,10 +76,12 @@ const translations: Record<string, Record<Language, string>> = {
 
   // About
   "about.hi": { en: "Hi, I'm", pl: "Cześć, jestem" },
-  "about.anna": { en: "Anna", pl: "Anna" },
-  "about.roles": { en: "Project Manager · Volunteer Coordinator · Trainer", pl: "Kierownik projektów · Koordynatorka wolontariatu · Trenerka" },
-  "about.bio1": { en: "I'm an experienced project coordinator with a background in healthcare and volunteer management. Through PINECO, I help non-profit organisations, community groups and social enterprises grow through expert consultancy, impactful training, and hands-on project coordination.", pl: "Jestem doświadczoną koordynatorką projektów z doświadczeniem w ochronie zdrowia i zarządzaniu wolontariatem. Przez PINECO pomagam organizacjom pozarządowym, grupom społecznym i przedsiębiorstwom społecznym rosnąć dzięki eksperckiemu doradztwu, szkoleniom i koordynacji projektów." },
-  "about.bio2": { en: "I'm also the co-founder of Association Level Up — a Polish non-profit founded in 2019, dedicated to improving quality of life through social projects, informal education, and international volunteering (Erasmus+ & ESC accredited).", pl: "Jestem również współzałożycielką Stowarzyszenia Level Up — polskiej organizacji pozarządowej założonej w 2019 roku, dedykowanej poprawie jakości życia poprzez projekty społeczne, edukację pozaformalną i wolontariat międzynarodowy (akredytacja Erasmus+ i ESC)." },
+  "about.anna": { en: "Anna Szyszkowska", pl: "Anna Szyszkowska" },
+  "about.roles": { en: "Project Coordinator · Volunteer Manager · Trainer · Founder of PINECO", pl: "Koordynatorka projektów · Menedżerka wolontariatu · Trenerka · Założycielka PINECO" },
+  "about.bio1": { en: "My background spans healthcare, informal education, and international volunteering. I hold an MSc in Laboratory Medicine, which gave me a deep appreciation for precision, process, and evidence-based thinking — qualities I now bring to the world of social impact consultancy.", pl: "Moje doświadczenie obejmuje ochronę zdrowia, edukację pozaformalną i wolontariat międzynarodowy. Posiadam tytuł magistra analityki medycznej, który dał mi głębokie zrozumienie precyzji, procesów i myślenia opartego na dowodach — cechy, które teraz wnoszę do świata doradztwa w zakresie wpływu społecznego." },
+  "about.bio2": { en: "In 2019, I co-founded Association Level Up, a Polish nonprofit dedicated to improving quality of life through social projects and international volunteering programmes under Erasmus+ and ESC. That experience — building something meaningful from scratch, across borders, with limited resources — is exactly what shaped the work I do today.", pl: "W 2019 roku współzałożyłam Stowarzyszenie Level Up — polską organizację pozarządową dedykowaną poprawie jakości życia poprzez projekty społeczne i programy wolontariatu międzynarodowego w ramach Erasmus+ i ESC. To doświadczenie — budowanie czegoś wartościowego od podstaw, ponad granicami, przy ograniczonych zasobach — ukształtowało moją dzisiejszą pracę." },
+  "about.bio3": { en: "Through PINECO, I support nonprofits, community groups and social enterprises across Europe with expert consultancy, practical training, and hands-on project coordination. I'm based in Cambridge, UK, and work remotely with organisations across the continent.", pl: "Przez PINECO wspieram organizacje pozarządowe, grupy społeczne i przedsiębiorstwa społeczne w całej Europie, oferując eksperckie doradztwo, praktyczne szkolenia i bezpośrednią koordynację projektów. Mieszkam w Cambridge, w Wielkiej Brytanii, i pracuję zdalnie z organizacjami z całego kontynentu." },
+  "about.bio4": { en: "If you're ready to take your next step, I'd love to help you get there.", pl: "Jeśli jesteś gotowa/y na kolejny krok, chętnie Ci w tym pomogę." },
   "about.remoteEurope": { en: "Remote across Europe", pl: "Zdalnie w całej Europie" },
   "about.myJourney": { en: "My Journey", pl: "Moja droga" },
   "about.journeySubtitle": { en: "From laboratory medicine to leading international projects — a path driven by curiosity and impact.", pl: "Od medycyny laboratoryjnej do prowadzenia międzynarodowych projektów — droga napędzana ciekawością i wpływem." },
@@ -120,15 +122,17 @@ const translations: Record<string, Record<Language, string>> = {
   "contact.messageSent": { en: "Message sent!", pl: "Wiadomość wysłana!" },
   "contact.messageSentDesc": { en: "We'll get back to you within 24 hours.", pl: "Odpowiemy w ciągu 24 godzin." },
 
-  // Projects
-  "projects.title": { en: "Our", pl: "Nasze" },
-  "projects.titleHighlight": { en: "Projects", pl: "Projekty" },
-  "projects.subtitle": { en: "A selection of projects that showcase our expertise and the results we deliver for our clients.", pl: "Wybrane projekty, które pokazują nasze kompetencje i wyniki, jakie dostarczamy klientom." },
-
-  // Recommendations page
-  "recommendations.title": { en: "Client", pl: "Rekomendacje" },
-  "recommendations.titleHighlight": { en: "Recommendations", pl: "klientów" },
-  "recommendations.subtitle": { en: "Don't just take our word for it — here's what our clients have to say about working with PINECO.", pl: "Nie musisz wierzyć nam na słowo — oto co mówią nasi klienci o współpracy z PINECO." },
+  // Past Collaborations page
+  "collab.title": { en: "Past", pl: "Dotychczasowe" },
+  "collab.titleHighlight": { en: "Collaborations", pl: "Współprace" },
+  "collab.subtitle": { en: "Projects, tools, and partnerships that shaped the work PINECO does today.", pl: "Projekty, narzędzia i partnerstwa, które ukształtowały dzisiejsze działania PINECO." },
+  "collab.projects": { en: "Projects at Other Organisations", pl: "Projekty w innych organizacjach" },
+  "collab.projectsSubtitle": { en: "Work delivered across nonprofits, foundations and international programmes before and alongside PINECO.", pl: "Praca realizowana w organizacjach pozarządowych, fundacjach i programach międzynarodowych." },
+  "collab.tools": { en: "PINECO Tools on GitHub", pl: "Narzędzia PINECO na GitHubie" },
+  "collab.toolsSubtitle": { en: "Open resources and templates built to support the third sector.", pl: "Otwarte zasoby i szablony stworzone z myślą o sektorze pozarządowym." },
+  "collab.viewRepo": { en: "View repository →", pl: "Zobacz repozytorium →" },
+  "collab.recommendations": { en: "What Others Say", pl: "Co mówią inni" },
+  "collab.recommendationsSubtitle": { en: "Feedback from collaborators, volunteers, and partner organisations.", pl: "Opinie od współpracowników, wolontariuszy i organizacji partnerskich." },
 
   // Services page detailed
   "services.page.title": { en: "Our", pl: "Nasze" },
