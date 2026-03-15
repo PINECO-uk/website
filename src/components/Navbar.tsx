@@ -2,20 +2,22 @@ import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { Menu, X, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useLanguage } from "@/contexts/LanguageContext";
 import pinecoLogo from "@/assets/pineco-logo.jpg";
 
 const navLinks = [
-  { label: "Home", href: "/" },
-  { label: "About", href: "/about" },
-  { label: "Services", href: "/services" },
-  { label: "Projects", href: "/projects" },
-  { label: "Recommendations", href: "/recommendations" },
-  { label: "Contact", href: "/contact" },
+  { key: "nav.home", href: "/" },
+  { key: "nav.about", href: "/about" },
+  { key: "nav.services", href: "/services" },
+  { key: "nav.projects", href: "/projects" },
+  { key: "nav.recommendations", href: "/recommendations" },
+  { key: "nav.contact", href: "/contact" },
 ];
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const navigate = useNavigate();
+  const { lang, setLang, t } = useLanguage();
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border/50">
@@ -31,31 +33,51 @@ const Navbar = () => {
           <div className="hidden lg:flex items-center gap-8">
             {navLinks.map((link) => (
               <Link
-                key={link.label}
+                key={link.key}
                 to={link.href}
                 className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
               >
-                {link.label}
+                {t(link.key)}
               </Link>
             ))}
           </div>
 
           <div className="hidden lg:flex items-center gap-4">
-            <a href="tel:5551234567" className="flex items-center gap-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
-              <Phone className="h-4 w-4" />
-              (555) 123-4567
-            </a>
+            {/* Language flags */}
+            <div className="flex items-center gap-1.5 border border-border rounded-full px-2 py-1">
+              <button
+                onClick={() => setLang("en")}
+                className={`text-base leading-none rounded-full px-1.5 py-0.5 transition-all ${lang === "en" ? "bg-primary/15 ring-1 ring-primary/30" : "opacity-60 hover:opacity-100"}`}
+                title="English"
+              >
+                🇬🇧
+              </button>
+              <button
+                onClick={() => setLang("pl")}
+                className={`text-base leading-none rounded-full px-1.5 py-0.5 transition-all ${lang === "pl" ? "bg-primary/15 ring-1 ring-primary/30" : "opacity-60 hover:opacity-100"}`}
+                title="Polski"
+              >
+                🇵🇱
+              </button>
+            </div>
             <Button onClick={() => navigate("/contact")} className="bg-primary hover:bg-primary-dark text-primary-foreground rounded-full px-6 font-semibold">
-              Get in Touch
+              {t("nav.getInTouch")}
             </Button>
           </div>
 
-          <button
-            onClick={() => setIsOpen(!isOpen)}
-            className="lg:hidden p-2 text-foreground"
-          >
-            {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-          </button>
+          <div className="flex items-center gap-2 lg:hidden">
+            {/* Mobile language flags */}
+            <div className="flex items-center gap-1">
+              <button onClick={() => setLang("en")} className={`text-base ${lang === "en" ? "opacity-100" : "opacity-50"}`}>🇬🇧</button>
+              <button onClick={() => setLang("pl")} className={`text-base ${lang === "pl" ? "opacity-100" : "opacity-50"}`}>🇵🇱</button>
+            </div>
+            <button
+              onClick={() => setIsOpen(!isOpen)}
+              className="p-2 text-foreground"
+            >
+              {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+            </button>
+          </div>
         </div>
       </div>
 
@@ -64,16 +86,16 @@ const Navbar = () => {
           <div className="container mx-auto px-4 py-4 space-y-3">
             {navLinks.map((link) => (
               <Link
-                key={link.label}
+                key={link.key}
                 to={link.href}
                 onClick={() => setIsOpen(false)}
                 className="block py-2 text-base font-medium text-muted-foreground hover:text-foreground transition-colors"
               >
-                {link.label}
+                {t(link.key)}
               </Link>
             ))}
             <Button onClick={() => { setIsOpen(false); navigate("/contact"); }} className="w-full bg-primary hover:bg-primary-dark text-primary-foreground rounded-full font-semibold mt-4">
-              Get in Touch
+              {t("nav.getInTouch")}
             </Button>
           </div>
         </div>
