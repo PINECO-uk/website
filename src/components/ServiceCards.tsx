@@ -1,19 +1,21 @@
 import { motion } from "framer-motion";
-import { FolderKanban, Heart, GraduationCap, MessageCircle } from "lucide-react";
+import { FolderKanban, Heart, GraduationCap, MessageCircle, ArrowRight } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 import { useLanguage } from "@/contexts/LanguageContext";
-import consultingImage from "@/assets/strategy-consulting.jpg";
-import trainingImage from "@/assets/training-workshop.jpg";
-import projectImage from "@/assets/project-coordination.jpg";
-import heroImage from "@/assets/hero-consultancy.jpg";
+import consultingImage from "@/assets/consultancy.jpg";
+import trainingImage from "@/assets/trainig.jpg";
+import projectImage from "@/assets/project-coordiantion.jpg";
+import volunteerImage from "@/assets/volunteer.jpg";
 
 const ServiceCards = () => {
   const { t } = useLanguage();
+  const navigate = useNavigate();
 
   const services = [
-    { icon: FolderKanban, titleKey: "services.projectCoordination", descKey: "services.projectCoordination.desc", image: projectImage },
-    { icon: Heart, titleKey: "services.volunteeringManagement", descKey: "services.volunteeringManagement.desc", image: heroImage },
-    { icon: GraduationCap, titleKey: "services.training", descKey: "services.training.desc", image: trainingImage },
     { icon: MessageCircle, titleKey: "services.consulting", descKey: "services.consulting.desc", image: consultingImage },
+    { icon: GraduationCap, titleKey: "services.training", descKey: "services.training.desc", image: trainingImage },
+    { icon: Heart, titleKey: "services.volunteeringManagement", descKey: "services.volunteeringManagement.desc", image: volunteerImage },
+    { icon: FolderKanban, titleKey: "services.projectCoordination", descKey: "services.projectCoordination.desc", image: projectImage },
   ];
 
   return (
@@ -28,7 +30,7 @@ const ServiceCards = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {services.map((service, index) => (
-            <motion.div key={service.titleKey} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: index * 0.1, duration: 0.5 }} className="group bg-card rounded-2xl overflow-hidden card-elevated hover:card-elevated-hover transition-all duration-300 hover:-translate-y-1">
+            <motion.div key={service.titleKey} onClick={() => navigate("/services")} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: index * 0.1, duration: 0.5 }} className="group bg-card rounded-2xl overflow-hidden card-elevated hover:card-elevated-hover transition-all duration-300 hover:-translate-y-1 cursor-pointer">
               <div className="h-48 overflow-hidden">
                 <img src={service.image} alt={t(service.titleKey)} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
               </div>
@@ -37,7 +39,10 @@ const ServiceCards = () => {
                   <service.icon className="h-6 w-6 text-primary" />
                 </div>
                 <h3 className="font-heading text-xl font-semibold text-card-foreground mb-2">{t(service.titleKey)}</h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">{t(service.descKey)}</p>
+                <p className="text-sm text-muted-foreground leading-relaxed mb-4">{t(service.descKey)}</p>
+                <span className="inline-flex items-center text-sm font-semibold text-primary group-hover:gap-2 transition-all">
+                  Find out more <ArrowRight className="ml-1 h-4 w-4" />
+                </span>
               </div>
             </motion.div>
           ))}

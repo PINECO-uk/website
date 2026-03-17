@@ -9,7 +9,6 @@ const navLinks = [
   { key: "nav.home", href: "/" },
   { key: "nav.about", href: "/about" },
   { key: "nav.services", href: "/services" },
-  { key: "nav.collaborations", href: "/collaborations" },
   { key: "nav.contact", href: "/contact" },
 ];
 
@@ -22,11 +21,9 @@ const Navbar = () => {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border/50">
       <div className="container mx-auto px-4 lg:px-8">
         <div className="flex items-center justify-between h-20">
-          <Link to="/" className="flex items-center gap-2">
+          <Link to="/" className="flex items-center gap-3">
             <img src={pinecoLogo} alt="PINECO logo" className="h-12 w-12 rounded-none object-cover" />
-            <span className="font-heading text-2xl font-bold text-foreground tracking-tight">
-              PINECO
-            </span>
+            <span className="font-heading text-xl font-bold text-primary">PINECO</span>
           </Link>
 
           <div className="hidden lg:flex items-center gap-8">
@@ -34,7 +31,7 @@ const Navbar = () => {
               <Link
                 key={link.key}
                 to={link.href}
-                className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+                className="text-base font-semibold text-foreground/80 hover:text-primary transition-colors"
               >
                 {t(link.key)}
               </Link>
@@ -88,7 +85,7 @@ const Navbar = () => {
                 key={link.key}
                 to={link.href}
                 onClick={() => setIsOpen(false)}
-                className="block py-2 text-base font-medium text-muted-foreground hover:text-foreground transition-colors"
+                className="block py-2 text-base font-semibold text-foreground/80 hover:text-primary transition-colors"
               >
                 {t(link.key)}
               </Link>

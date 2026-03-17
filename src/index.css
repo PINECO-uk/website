@@ -6,46 +6,46 @@
 
 @layer base {
   :root {
-    --background: 40 20% 97%;
-    --foreground: 30 30% 15%;
+    --background: 46 38% 91%;
+    --foreground: 29 40% 12%;
 
-    --card: 40 15% 100%;
-    --card-foreground: 30 30% 15%;
+    --card: 46 30% 96%;
+    --card-foreground: 29 40% 12%;
 
-    --popover: 40 15% 100%;
-    --popover-foreground: 30 30% 15%;
+    --popover: 46 30% 96%;
+    --popover-foreground: 29 40% 12%;
 
-    --primary: 174 60% 36%;
+    --primary: 180 30% 34%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 30 40% 22%;
+    --secondary: 29 53% 32%;
     --secondary-foreground: 0 0% 100%;
 
-    --muted: 35 15% 93%;
-    --muted-foreground: 30 10% 42%;
+    --muted: 40 20% 85%;
+    --muted-foreground: 29 15% 42%;
 
-    --accent: 174 50% 32%;
+    --accent: 180 30% 30%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 35 15% 87%;
-    --input: 35 15% 87%;
-    --ring: 174 60% 36%;
+    --border: 40 20% 82%;
+    --input: 40 20% 82%;
+    --ring: 180 30% 34%;
 
     --radius: 0.75rem;
 
-    --primary-soft: 174 30% 92%;
-    --primary-dark: 174 60% 28%;
-    --accent-success: 174 50% 32%;
-    --pine-brown: 30 50% 35%;
-    --pine-brown-light: 30 40% 85%;
+    --primary-soft: 180 25% 88%;
+    --primary-dark: 180 30% 26%;
+    --accent-success: 180 30% 30%;
+    --pine-brown: 29 53% 32%;
+    --pine-brown-light: 29 40% 85%;
 
-    --hero-gradient: linear-gradient(135deg, hsl(30 40% 12% / 0.75), hsl(174 40% 15% / 0.65));
-    --section-gradient: linear-gradient(180deg, hsl(40 20% 97%) 0%, hsl(35 25% 92%) 100%);
-    --card-shadow: 0 4px 24px -4px hsl(30 30% 15% / 0.08);
-    --card-shadow-hover: 0 12px 40px -8px hsl(30 30% 15% / 0.15);
+    --hero-gradient: linear-gradient(135deg, hsl(29 50% 10% / 0.75), hsl(180 30% 15% / 0.65));
+    --section-gradient: linear-gradient(180deg, hsl(46 38% 91%) 0%, hsl(40 30% 86%) 100%);
+    --card-shadow: 0 4px 24px -4px hsl(29 40% 12% / 0.08);
+    --card-shadow-hover: 0 12px 40px -8px hsl(29 40% 12% / 0.15);
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
@@ -98,7 +98,7 @@
     @apply bg-background text-foreground font-body antialiased;
   }
   h1, h2, h3, h4, h5, h6 {
-    @apply font-heading;
+    @apply font-heading text-foreground;
   }
 }
 

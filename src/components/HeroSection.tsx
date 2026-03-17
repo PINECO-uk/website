@@ -3,8 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
-import heroImage from "@/assets/project-coordination.jpg";
-import pinecoLogo from "@/assets/pineco-logo.jpg";
+import heroImage from "@/assets/hero-pinecone.jpg.jpg";
 
 const HeroSection = () => {
   const navigate = useNavigate();
@@ -18,10 +17,6 @@ const HeroSection = () => {
 
       <div className="relative container mx-auto px-4 lg:px-8 pt-20">
         <div className="max-w-2xl">
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className="mb-8">
-            <img src={pinecoLogo} alt="PINECO logo" className="h-28 w-28 md:h-36 md:w-36 rounded-none object-cover shadow-lg" />
-          </motion.div>
-
           <motion.h1 initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.1 }} className="text-5xl md:text-6xl lg:text-7xl font-heading font-bold text-primary-foreground leading-tight mb-6">
             {t("hero.title1")}{" "}
             <span className="text-accent">{t("hero.title2")}</span>
@@ -36,7 +31,7 @@ const HeroSection = () => {
               {t("hero.services")}
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
-            <Button variant="outline" onClick={() => navigate("/contact")} className="border-2 border-white/40 text-white bg-white/10 hover:bg-white/20 rounded-full px-8 py-6 text-lg font-semibold backdrop-blur-sm">
+            <Button variant="outline" onClick={() => navigate("/contact")} className="border-2 border-primary-foreground/40 text-primary-foreground bg-primary-foreground/10 hover:bg-primary-foreground/20 rounded-full px-8 py-6 text-lg font-semibold backdrop-blur-sm">
               {t("hero.consultation")}
             </Button>
           </motion.div>

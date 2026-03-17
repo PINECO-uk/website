@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { motion } from "framer-motion";
-import { MapPin, Phone, Mail, Clock } from "lucide-react";
+import { MapPin, Phone, Mail } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { useLanguage } from "@/contexts/LanguageContext";
 
@@ -15,10 +15,9 @@ const Contact = () => {
   const [form, setForm] = useState({ name: "", email: "", company: "", message: "" });
 
   const contactInfo = [
-    { icon: MapPin, labelKey: "footer.address", value: "123 Business Avenue, London, EC2A 1BB" },
-    { icon: Phone, labelKey: "footer.phone", value: "(555) 123-4567" },
-    { icon: Mail, labelKey: "footer.email", value: "hello@pineco.com" },
-    { icon: Clock, labelKey: "footer.hours", value: "Mon–Fri: 9am–6pm" },
+    { icon: MapPin, labelKey: "footer.address", value: "Cambridge, UK" },
+    { icon: Phone, labelKey: "footer.phone", value: "07500 378102" },
+    { icon: Mail, labelKey: "footer.email", value: "pineco.uk@gmail.com" },
   ];
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -49,20 +48,20 @@ const Contact = () => {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
                   <label className="text-sm font-medium text-foreground mb-1.5 block">{t("contact.yourName")}</label>
-                  <Input placeholder={t("contact.namePlaceholder")} className="rounded-lg" value={form.name} onChange={(e) => setForm({ ...form, name: e.target.value })} />
+                  <Input placeholder={t("contact.namePlaceholder")} className="rounded-xl" value={form.name} onChange={(e) => setForm({ ...form, name: e.target.value })} />
                 </div>
                 <div>
                   <label className="text-sm font-medium text-foreground mb-1.5 block">{t("contact.email")}</label>
-                  <Input type="email" placeholder={t("contact.emailPlaceholder")} className="rounded-lg" value={form.email} onChange={(e) => setForm({ ...form, email: e.target.value })} />
+                  <Input type="email" placeholder={t("contact.emailPlaceholder")} className="rounded-xl" value={form.email} onChange={(e) => setForm({ ...form, email: e.target.value })} />
                 </div>
               </div>
               <div>
                 <label className="text-sm font-medium text-foreground mb-1.5 block">{t("contact.company")}</label>
-                <Input placeholder={t("contact.companyPlaceholder")} className="rounded-lg" value={form.company} onChange={(e) => setForm({ ...form, company: e.target.value })} />
+                <Input placeholder={t("contact.companyPlaceholder")} className="rounded-xl" value={form.company} onChange={(e) => setForm({ ...form, company: e.target.value })} />
               </div>
               <div>
                 <label className="text-sm font-medium text-foreground mb-1.5 block">{t("contact.message")}</label>
-                <Textarea placeholder={t("contact.messagePlaceholder")} rows={5} className="rounded-lg" value={form.message} onChange={(e) => setForm({ ...form, message: e.target.value })} />
+                <Textarea placeholder={t("contact.messagePlaceholder")} rows={5} className="rounded-xl" value={form.message} onChange={(e) => setForm({ ...form, message: e.target.value })} />
               </div>
               <Button type="submit" className="w-full bg-primary hover:bg-primary-dark text-primary-foreground rounded-full py-6 font-semibold text-base">
                 {t("contact.sendBtn")}

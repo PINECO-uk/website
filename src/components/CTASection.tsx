@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, CalendarDays } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 const CTASection = () => {
@@ -17,13 +17,13 @@ const CTASection = () => {
             <h2 className="font-heading text-4xl md:text-5xl font-bold text-primary-foreground mb-4">{t("cta.title")}</h2>
             <p className="text-lg text-primary-foreground/80 max-w-xl mx-auto mb-10">{t("cta.subtitle")}</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button onClick={() => navigate("/contact")} className="bg-white hover:bg-white/90 text-primary rounded-full px-8 py-6 text-lg font-semibold shadow-lg">
+              <Button onClick={() => navigate("/contact")} className="bg-primary-foreground hover:bg-primary-foreground/90 text-primary rounded-full px-8 py-6 text-lg font-semibold shadow-lg">
                 {t("cta.startConversation")}
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
-              <Button variant="outline" onClick={() => navigate("/collaborations")} className="border-2 border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 rounded-full px-8 py-6 text-lg font-semibold">
-                <CalendarDays className="mr-2 h-5 w-5" />
+              <Button variant="outline" onClick={() => navigate("/services")} className="border-2 border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 rounded-full px-8 py-6 text-lg font-semibold">
                 {t("cta.viewProjects")}
+                <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
             </div>
           </div>
