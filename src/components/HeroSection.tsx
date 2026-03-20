@@ -27,7 +27,7 @@ const HeroSection = () => {
           </motion.p>
 
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.3 }} className="flex flex-col sm:flex-row gap-4">
-            <Button onClick={() => navigate("/services")} className="bg-primary hover:bg-primary-dark text-primary-foreground rounded-full px-8 py-6 text-lg font-semibold shadow-lg">
+            <Button onClick={() => navigate("/services")} className="bg-white hover:bg-white/90 text-primary rounded-full px-8 py-6 text-lg font-semibold shadow-lg">
               {t("hero.services")}
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>

@@ -99,10 +99,17 @@ const Services = () => {
               </ul>
             </div>
             <p className="text-muted-foreground text-sm leading-relaxed mb-8">{t("services.page.consultingNote")}</p>
-            <Button onClick={() => navigate("/contact")} className="bg-primary hover:bg-primary-dark text-primary-foreground rounded-full px-8 py-6 text-base font-semibold">
-              {t("services.page.bookConsulting")}
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Button>
+            <div className="bg-primary/5 border border-primary/20 rounded-xl p-6 mb-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+              <div>
+                <p className="text-xs uppercase tracking-wide text-muted-foreground font-semibold mb-1">{t("services.page.pricing")}</p>
+                <p className="text-2xl font-bold text-primary">{t("services.page.consultingPrice")}</p>
+                <p className="text-sm text-muted-foreground mt-1">{t("services.page.consultingPricingNote")}</p>
+              </div>
+              <Button onClick={() => navigate("/contact")} className="bg-primary hover:bg-primary-dark text-primary-foreground rounded-full px-7 py-5 text-sm font-semibold shrink-0">
+                {t("services.page.bookConsulting")}
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Button>
+            </div>
           </motion.div>
         </div>
       </section>
@@ -172,9 +179,16 @@ const Services = () => {
               </div>
             </div>
 
-            <div className="bg-card rounded-xl p-6 card-elevated">
-              <p className="text-sm font-medium text-foreground mb-1">{t("services.page.pricing")}</p>
-              <p className="text-muted-foreground text-sm">{t("services.page.trainingPricing")} <button onClick={() => navigate("/contact")} className="text-primary hover:text-primary-dark font-medium underline underline-offset-2">{t("services.page.enquireSession")}</button></p>
+            <div className="bg-primary/5 border border-primary/20 rounded-xl p-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+              <div>
+                <p className="text-xs uppercase tracking-wide text-muted-foreground font-semibold mb-1">{t("services.page.pricing")}</p>
+                <p className="text-2xl font-bold text-primary">{t("services.page.trainingPrice")}</p>
+                <p className="text-sm text-muted-foreground mt-1">{t("services.page.trainingPricing")}</p>
+              </div>
+              <Button onClick={() => navigate("/contact")} className="bg-primary hover:bg-primary-dark text-primary-foreground rounded-full px-7 py-5 text-sm font-semibold shrink-0">
+                {t("services.page.enquireSession")}
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Button>
             </div>
           </motion.div>
         </div>
@@ -202,9 +216,16 @@ const Services = () => {
                 ))}
               </ul>
             </div>
-            <div className="bg-card rounded-xl p-6 card-elevated">
-              <p className="text-sm font-medium text-foreground mb-1">{t("services.page.pricing")}</p>
-              <p className="text-muted-foreground text-sm">{t("services.page.volPricing")} <button onClick={() => navigate("/contact")} className="text-primary hover:text-primary-dark font-medium underline underline-offset-2">{t("services.page.getQuote")}</button></p>
+            <div className="bg-primary/5 border border-primary/20 rounded-xl p-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+              <div>
+                <p className="text-xs uppercase tracking-wide text-muted-foreground font-semibold mb-1">{t("services.page.pricing")}</p>
+                <p className="text-lg font-bold text-primary">{t("services.page.volPricing")}</p>
+                <p className="text-sm text-muted-foreground mt-1">{t("services.page.volPricingNote")}</p>
+              </div>
+              <Button onClick={() => navigate("/contact")} className="bg-primary hover:bg-primary-dark text-primary-foreground rounded-full px-7 py-5 text-sm font-semibold shrink-0">
+                {t("services.page.bookConsulting")}
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Button>
             </div>
           </motion.div>
         </div>
@@ -233,9 +254,16 @@ const Services = () => {
                 ))}
               </ul>
             </div>
-            <div className="bg-card rounded-xl p-6 card-elevated">
-              <p className="text-sm font-medium text-foreground mb-1">{t("services.page.pricing")}</p>
-              <p className="text-muted-foreground text-sm">{t("services.page.projectPricing")} <button onClick={() => navigate("/contact")} className="text-primary hover:text-primary-dark font-medium underline underline-offset-2">{t("services.page.getQuote")}</button></p>
+            <div className="bg-primary/5 border border-primary/20 rounded-xl p-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+              <div>
+                <p className="text-xs uppercase tracking-wide text-muted-foreground font-semibold mb-1">{t("services.page.pricing")}</p>
+                <p className="text-lg font-bold text-primary">{t("services.page.projectPricing")}</p>
+                <p className="text-sm text-muted-foreground mt-1">{t("services.page.projectPricingNote")}</p>
+              </div>
+              <Button onClick={() => navigate("/contact")} className="bg-primary hover:bg-primary-dark text-primary-foreground rounded-full px-7 py-5 text-sm font-semibold shrink-0">
+                {t("services.page.getQuote")}
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Button>
             </div>
           </motion.div>
         </div>

@@ -15,8 +15,8 @@ const Index = () => {
       <TrustBadges />
       <ServiceCards />
       
-      <Testimonials />
-      <CTASection />
+      {/* <Testimonials /> */}
+<CTASection />
       <Footer />
     </div>
   );
